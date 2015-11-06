@@ -1,0 +1,26 @@
+void le_dados ( int ** matriz , int lin , int col ) {
+int i , j;
+puts (" Entre com os dados ");
+for (i =0; i < lin ; i ++) {
+printf (" Entre com a linha %d\n ", i);
+for (j =0; j < col ; j ++) {
+printf (" Elemento %d %d\n", i , j);
+scanf ("%d ", *( matriz +i) +j );
+}
+}
+}
+void imprime_matriz ( int ** matriz , int lin , int col ) {
+int i , j;
+for (i =0; i < lin ; i ++) {
+for (j =0; j < col ; j ++) {
+printf (" %7 d ", *(*( matriz + i) +j));
+}
+printf ("\n");
+}
+}
+void troca_linhas ( int ** matriz , int linha1 , int linha2 ) {
+int * temp ;
+temp = *( matriz + linha1 );
+*( matriz + linha1 ) = *( matriz + linha2 );
+*( matriz + linha2 ) = temp ;
+}
